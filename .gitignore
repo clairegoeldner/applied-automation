@@ -1,0 +1,31 @@
+# Node.js
+node_modules/
+
+# Build output
+dist/
+build/
+
+# C# specific
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.suo
+*.user
+
+# IDEs and editors
+.vscode/
+.vs/
+*.swp
+*.swo
+
+# OS specific
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Local configuration files
+**/launchSettings.json
+**/appsettings.Development.json
+**/appsettings.Local.json
+**/appsettings.Production.json
