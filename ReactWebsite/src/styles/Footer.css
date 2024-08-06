@@ -1,0 +1,11 @@
+footer {
+    background: linear-gradient(to top, var(--gradient-thin));
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+footer p {
+    display: block;
+    margin: 0.25rem auto;
+}

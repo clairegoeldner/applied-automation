@@ -1,0 +1,60 @@
+div.nav {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    width: 100%;
+}
+
+nav {
+    position: relative;
+}
+
+nav.fixed {
+    position: fixed;
+}
+
+div.nav > div.row {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    max-width: calc(100% - 5rem);
+    padding: 0.25rem 2.5rem;
+}
+
+div.nav div.logo {
+    font-size: 24px;
+    margin: 1rem 3rem;
+    padding: 2rem 5rem;
+}
+
+div.nav div.header {
+    background: linear-gradient(to right, var(--gradient-wide));
+}
+
+div.nav h1 {
+    display: block;
+    flex: 1 0 auto;
+    margin: 2rem 3rem;
+    max-width: calc(100% - 6rem);
+    text-align: left;
+}
+
+ul {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    flex: 1 1 auto;
+    display: block;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+nav li > *.button {
+    margin-top: 0;
+    margin-bottom: 0;
+    min-width: 10rem;
+}

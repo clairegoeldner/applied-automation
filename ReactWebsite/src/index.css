@@ -1,13 +1,156 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates&display=swap');
+
+:root {
+  --blue: #021040;
+  --bronze: #5B3107;
+  --dark-grey: #252E33;
+  --med-grey: #717A7F;
+  --light-grey: #BDC6CB;
+
+  --shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+
+  --gradient-wide: var(--blue), var(--med-grey) 10%, var(--light-grey) 90%, var(--bronze);
+  --gradient-thin: var(--dark-grey), var(--med-grey) 25%, var(--light-grey) 75%, transparent;
+
+  --font-body: Montserrat, sans-serif;
+  --font-header: 'Times New Roman', Times, serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  background: var(--dark-grey);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background: white;
+  font-family: var(--font-body);
+  margin: 0;
+  width: 100%;
+}
+
+.body {
+  max-width: 100%;
+  min-height: 50vh;
+}
+
+div#root {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.inset-box {
+  background-color: var(--blue);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  color: white;
+  display: flex;
+  font-family: var(--font-header);
+  margin: 2rem auto;
+  max-width: calc(85% - 4rem);
+  padding: 2rem;
+}
+
+.inset-box.column {
+  flex-flow: column wrap;
+}
+
+div.section {
+  margin: auto;
+  max-width: 90%;
+  padding: 1rem;
+}
+
+:has(> .col) {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+:has(> .row) {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.col, .row {
+  align-items: center;
+  flex: 1 1 auto;
+  max-width: 100%;
+  min-width: 250px;
+  padding: 1rem;
+}
+
+.col-reverse {
+  flex-flow: column wrap-reverse;
+}
+
+.row-reverse {
+  flex-flow: row wrap-reverse;
+}
+
+div.hr {
+  background-color: var(--bronze);
+  border-radius: 2px;
+  display: block;
+  height: 2px;
+  margin: 1rem auto;
+  width: 150px;
+}
+
+h1 {
+  display: block;
+  font-family: var(--font-header);
+  font-size: 2rem;
+  margin: 2rem auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+h2 {
+  display: block;
+  font-family: var(--font-header);
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 1rem auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+p {
+  margin: 2rem;
+  max-width: 750px;
+}
+
+button, .button {
+  background: white;
+  background-position: 0 1.1rem;
+  background-repeat: repeat-x;
+  background-size: 0.1rem 0.1rem;
+  border: none;
+  border-radius: 2px;
+  color: black;
+  display: block;
+  font-size: 1.25rem;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  transition: ease-in-out 0.15s;
+  text-align: center;
+  text-decoration: none;
+}
+
+:is(button, .button):is(:hover, :focus) {
+  background: var(--bronze);
+  box-shadow: var(--shadow);
+}
+
+.img {
+  background-color: grey;
+  border: 2px solid var(--bronze);
+  border-radius: 2px;
+  height: 250px;
+  margin: auto;
+  max-width: 500px;
+  min-width: 250px;
+  width: 100%;
 }

@@ -1,0 +1,20 @@
+form.inset-box {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+input {
+    display: block;
+    font-size: 18px;
+    margin: 1rem auto;
+    padding: 0.5rem;
+}
+
+form p.error {
+    background: white;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5rem auto;
+    padding: 1rem;
+}

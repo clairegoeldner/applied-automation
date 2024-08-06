@@ -1,0 +1,3 @@
+nav.admin .row:not(.header) {
+    background: var(--blue);
+}
