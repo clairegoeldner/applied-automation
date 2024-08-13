@@ -40,9 +40,20 @@ export default function Contact() {
 
     return (
         <>
+            <h1>Contact Us</h1>
             <div className="inset-box">
                 <div className="col">
-                    <div className="img" />
+                    <div className="pane">
+                        <h1>Better yet, see us in person!</h1>
+                        <h2>We love our customers, so feel free to visit during normal business hours.</h2>
+                        <div className="hr" />
+                        <p>County Road E<br />Whitehall, WI 54773</p>
+                        <p><a href="tel:7155295936" className="link">715 295 5936</a></p>
+                        <div className="hr" />
+                        <h2>Hours</h2>
+                        <p>Monday - Friday</p>
+                        <p>9:00 am - 5:00 pm</p>
+                    </div>
                 </div>
                 <form onSubmit={handleSubmit} className="col">
                     <div className="input-box">

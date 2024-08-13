@@ -1,4 +1,5 @@
-const url = "https://localhost:7001";
+// const url = "https://localhost:7001";
+const url = "https://applied-automation-api.azurewebsites.net/";
 
 export async function GetToken(username, password) {
     const response = await fetch(url + "/auth/token", {

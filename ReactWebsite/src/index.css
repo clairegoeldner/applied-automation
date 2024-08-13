@@ -41,6 +41,10 @@ div#root {
   flex-flow: column nowrap;
 }
 
+.white {
+  color: white !important;
+}
+
 .inset-box {
   background-color: var(--blue);
   border-radius: 5px;
@@ -55,6 +59,20 @@ div#root {
 
 .inset-box.column {
   flex-flow: column wrap;
+}
+
+.pane {
+  background: white;
+  border-radius: 2px;
+  color: black;
+  font-size: 1.25rem;
+  padding: 1rem;
+  text-align: center;
+  transition: ease-in-out 0.25s;
+}
+
+.pane:hover {
+  box-shadow: var(--shadow);
 }
 
 div.section {
@@ -118,7 +136,7 @@ h2 {
 }
 
 p {
-  margin: 2rem;
+  margin: 2rem auto;
   max-width: 750px;
 }
 
@@ -142,10 +160,6 @@ button, .button {
   box-shadow: var(--shadow);
 }
 
-.button-short {
-  
-}
-
 .img {
   background-color: grey;
   border: 2px solid var(--bronze);
@@ -155,4 +169,21 @@ button, .button {
   max-width: 500px;
   min-width: 250px;
   width: 100%;
+}
+
+.img + .img {
+  margin-top: 4rem;
+}
+
+a.link {
+  border-radius: 2px;
+  color: black;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: ease-in-out 0.25s;
+}
+
+a.link:is(:hover, :focus, :active) {
+  background: var(--bronze);
+  box-shadow: var(--shadow);
 }
