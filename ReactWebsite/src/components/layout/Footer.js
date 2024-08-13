@@ -1,4 +1,5 @@
-import "../../styles/Footer.css"
+import React from "react";
+import "../../styles/Footer.css";
 
 export default function Footer() {
     return (
@@ -8,5 +9,5 @@ export default function Footer() {
                 <p>All Rights Reserved</p>
             </div>
         </footer>
-    )
+    );
 }

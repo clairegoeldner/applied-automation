@@ -1,4 +1,4 @@
-const url = "https://localhost:7001"
+const url = "https://localhost:7001";
 
 export async function GetToken(username, password) {
     const response = await fetch(url + "/auth/token", {

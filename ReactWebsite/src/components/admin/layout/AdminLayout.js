@@ -1,3 +1,4 @@
+import React from "react";
 import { Outlet } from "react-router-dom";
 import AdminNavBar from "./AdminNavBar";
 import Footer from "../../layout/Footer";
@@ -23,7 +24,7 @@ export default function AdminLayout() {
                 </div>
                 <Footer />
             </>
-        )
+        );
     }
 }
 
@@ -31,16 +32,16 @@ function isAuthenticated() {
     const token = localStorage.getItem("token");
     if (token) {
         try {
-            const parsedUser = JSON.parse(atob(token.split('.')[1])); // Decode JWT payload
+            const parsedUser = JSON.parse(atob(token.split(".")[1])); // Decode JWT payload
             if (parsedUser && new Date(parsedUser.exp * 1000) > new Date()) {
                 return true;
             } else {
-                localStorage.removeItem('token');
+                localStorage.removeItem("token");
                 return false;
             }
         } catch (error) {
-            console.error('Invalid token:', error);
-            localStorage.removeItem('token');
+            console.error("Invalid token:", error);
+            localStorage.removeItem("token");
             return false;
         }
     } else {

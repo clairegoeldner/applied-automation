@@ -124,24 +124,26 @@ p {
 
 button, .button {
   background: white;
-  background-position: 0 1.1rem;
-  background-repeat: repeat-x;
-  background-size: 0.1rem 0.1rem;
   border: none;
   border-radius: 2px;
   color: black;
   display: block;
   font-size: 1.25rem;
   margin: 1rem auto;
+  outline: none;
   padding: 0.5rem;
-  transition: ease-in-out 0.15s;
+  transition: ease-in-out 0.25s;
   text-align: center;
   text-decoration: none;
 }
 
-:is(button, .button):is(:hover, :focus) {
+:is(button, .button):is(:hover, :focus, :active) {
   background: var(--bronze);
   box-shadow: var(--shadow);
+}
+
+.button-short {
+  
 }
 
 .img {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "../../styles/Forms.css";
 import { GetToken } from "../../utils/ApiUtil";
 
@@ -22,14 +22,20 @@ export default function AdminLogin() {
         } catch (e) {
             setResult("An error occured. Please try again. If the error persists, please notify IT personnel.");
         }
-    }
+    };
 
     return (
         <>
             <h1>Login</h1>
             <form onSubmit={handleSubmit} className="inset-box">
-                <input type="text" placeholder="Username" value={username} onChange={(e) => {setUsername(e.target.value); setResult("");}} required />
-                <input type="password" placeholder="Password" value={password} onChange={(e) => {setPassword(e.target.value); setResult("");}} required />
+                <div className="input-box">
+                    <label htmlFor="username">Username</label>
+                    <input id="username" type="text" value={username} onChange={(e) => {setUsername(e.target.value); setResult("");}} required />
+                </div>
+                <div className="input-box">
+                    <label htmlFor="password">Password</label>
+                    <input id="password" type="password" value={password} onChange={(e) => {setPassword(e.target.value); setResult("");}} required />
+                </div>
                 <button type="submit">Login</button>
                 {
                     (result) ?
@@ -38,5 +44,5 @@ export default function AdminLogin() {
                 }
             </form>
         </>
-    )
+    );
 }

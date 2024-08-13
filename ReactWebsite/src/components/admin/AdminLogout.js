@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 export default function AdminLogout() {
@@ -12,5 +13,5 @@ export default function AdminLogout() {
                 <Link to="/" className="button">Home</Link>
             </div>
         </>
-    )
+    );
 }

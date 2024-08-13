@@ -3,15 +3,44 @@ form.inset-box {
     flex-flow: column wrap;
 }
 
-input {
+.input-box {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0.5rem auto;
+    text-align: center;
+}
+
+label {
+    border-bottom: 1px solid white;
+    display: inline-block;
+    font-family: var(--font-header);
+    font-size: 1.25rem;
+    margin: 0 auto;
+    padding: 0 1.5rem 0.5rem;
+}
+
+input, textarea {
+    border: none;
+    border-radius: 2px;
     display: block;
     font-size: 18px;
     margin: 1rem auto;
+    outline: none;
     padding: 0.5rem;
+    transition: ease-in-out 0.25s;
+}
+
+:is(input, textarea):is(:hover, :focus, :active) {
+    box-shadow: var(--shadow);
+}
+
+textarea {
+    min-height: 5rem;
 }
 
 form p.error {
     background: white;
+    border-radius: 2px;
     color: red;
     font-weight: bold;
     text-align: center;
