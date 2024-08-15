@@ -5,6 +5,7 @@ package-lock.json
 # Build output
 dist/
 build/
+publish/
 
 # React specific
 .DS_Store
@@ -30,6 +31,7 @@ yarn-error.log*
 .vs/
 *.swp
 *.swo
+*.config
 
 # OS specific
 .DS_Store
