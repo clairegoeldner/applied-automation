@@ -187,3 +187,7 @@ a.link:is(:hover, :focus, :active) {
   background: var(--bronze);
   box-shadow: var(--shadow);
 }
+
+span.loader {
+  margin: auto;
+}

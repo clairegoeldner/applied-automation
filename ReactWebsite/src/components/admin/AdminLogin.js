@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import "../../styles/Forms.css";
 import { GetToken } from "../../utils/ApiUtil";
+import { PacmanLoader } from "react-spinners";
 
 export default function AdminLogin() {
-    let [username, setUsername] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [result, setResult] = useState("");
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+
+        setIsLoading(true);
 
         try {
             const response = await GetToken(username, password);
@@ -22,6 +26,8 @@ export default function AdminLogin() {
         } catch (e) {
             setResult("An error occured. Please try again. If the error persists, please notify IT personnel.");
         }
+
+        setIsLoading(false);
     };
 
     return (
@@ -37,6 +43,7 @@ export default function AdminLogin() {
                     <input id="password" type="password" value={password} onChange={(e) => {setPassword(e.target.value); setResult("");}} required />
                 </div>
                 <button type="submit">Login</button>
+                <PacmanLoader className="loader" color="white" loading={isLoading} />
                 {
                     (result) ?
                         <p className="error">{result}</p>
