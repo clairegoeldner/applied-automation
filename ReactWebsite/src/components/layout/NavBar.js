@@ -17,6 +17,7 @@ export default function NavBar() {
                     <li><Link to="/services" className="button">Services</Link></li>
                     <li><Link to="/about" className="button">About</Link></li>
                     <li><Link to="/contact" className="button">Contact</Link></li>
+                    <li><Link to="/themes" className="button">Themes</Link></li>
                     <li><Link to="/more" className="button">...</Link></li>
                 </ul>
             </nav>

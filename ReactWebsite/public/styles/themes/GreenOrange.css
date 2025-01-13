@@ -1,0 +1,69 @@
+:root {
+  --shadow: "";
+
+  --dark-green: #283618;
+  --med-green: #606C38;
+  --light-orange: #DDA15E;
+  --dark-orange: #BC6C25;
+  --cream: #FEFAE0;
+  
+  --gradient-wide: var(--dark-green), var(--med-green) 10%, var(--cream) 50%, var(--light-orange) 90%, var(--dark-orange);
+  --gradient-thin: var(--dark-orange), var(--dark-orange);
+  
+  --admin-nav-bar: var(--dark-green);
+}
+
+html {
+  background: var(--dark-orange);
+}
+
+body {
+  background: white;
+}
+
+.inset-box {
+  background-color: var(--dark-green);
+  color: white;
+}
+
+.pane {
+  background: white;
+  color: black;
+}
+
+p {
+  border-top: 1px solid var(--dark-green);
+  padding-top: 1rem;
+}
+
+footer p, .pane p {
+  border: none;
+}
+
+div.hr {
+  background-color: var(--light-orange);
+}
+
+button, .button {
+  background: var(--dark-orange);
+  color: black;
+}
+
+:is(button, .button):is(:hover, :focus, :active) {
+  background: var(--light-orange);
+  box-shadow: var(--shadow);
+  color: black;
+}
+
+.img {
+  border: 2px solid var(--light-orange);
+}
+
+a.link {
+  color: black;
+}
+
+a.link:is(:hover, :focus, :active) {
+  background: var(--light-orange);
+  box-shadow: var(--shadow);
+}

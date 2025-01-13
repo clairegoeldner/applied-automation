@@ -1,0 +1,56 @@
+:root {
+  --admin-nav-bar: var(--dark-blue);
+
+  --dark-blue: #0D47A1;
+  --med-blue: #1565C0;
+  --light-blue: #BBDEFB;
+  --light-grey: #E3F2FD;
+  
+  --gradient-wide: var(--dark-blue), var(--med-blue) 10%, var(--light-grey) 90%, var(--light-blue);
+  --gradient-thin: var(--dark-blue), var(--med-blue) 25%, transparent 35%;
+}
+
+html {
+  background: var(--dark-blue);
+}
+
+body {
+  background: white;
+}
+
+.inset-box {
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+.pane {
+  background: white;
+  color: black;
+}
+
+div.hr {
+  background-color: var(--light-blue);
+}
+
+button, .button {
+  background: white;
+  color: black;
+}
+
+:is(button, .button):is(:hover, :focus, :active) {
+  background: var(--light-blue);
+  box-shadow: var(--shadow);
+}
+
+.img {
+  border: 2px solid var(--light-blue);
+}
+
+a.link {
+  color: black;
+}
+
+a.link:is(:hover, :focus, :active) {
+  background: var(--light-blue);
+  box-shadow: var(--shadow);
+}

@@ -1,0 +1,64 @@
+:root {
+  --dark-red: #780000;
+  --med-red: #C1121F;
+  --light-gold: #FFA600;
+  --dark-gold: #FF8000;
+  --cream: #FDF0D5;
+  
+  --gradient-wide: var(--dark-red), var(--med-red) 10%, var(--cream) 90%, var(--light-gold);
+  --gradient-thin: var(--dark-gold) 10%, transparent 20%;
+  
+  --admin-nav-bar: var(--dark-red);
+}
+
+html {
+  background: var(--dark-gold);
+}
+
+body {
+  background: white;
+}
+
+.inset-box {
+  background-color: var(--dark-red);
+  color: white;
+}
+
+.pane {
+  background: white;
+  color: black;
+}
+
+.inset-box button, .inset-box .button {
+  background: var(--med-red);
+  color: white;
+}
+
+div.hr {
+  background-color: var(--light-gold);
+}
+
+button, .button {
+  border-bottom: 2px solid var(--dark-red) !important;
+  color: black;
+}
+
+:is(button, .button):is(:hover, :focus, :active) {
+  background: var(--light-gold);
+  border-bottom: 2px solid var(--dark-gold) !important;
+  box-shadow: var(--shadow);
+  color: black;
+}
+
+.img {
+  border: 2px solid var(--light-gold);
+}
+
+a.link {
+  color: black;
+}
+
+a.link:is(:hover, :focus, :active) {
+  background: var(--light-gold);
+  box-shadow: var(--shadow);
+}

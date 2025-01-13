@@ -1,0 +1,57 @@
+:root {
+  --admin-nav-bar: var(--blue);
+
+  --blue: #021040;
+  --bronze: #5B3107;
+  --dark-grey: #252E33;
+  --med-grey: #717A7F;
+  --light-grey: #BDC6CB;
+  
+  --gradient-wide: var(--blue), var(--med-grey) 10%, var(--light-grey) 90%, var(--bronze);
+  --gradient-thin: var(--dark-grey), var(--med-grey) 25%, var(--light-grey) 75%, transparent;
+}
+
+html {
+  background: var(--dark-grey);
+}
+
+body {
+  background: white;
+}
+
+.inset-box {
+  background-color: var(--blue);
+  color: white;
+}
+
+.pane {
+  background: white;
+  color: black;
+}
+
+div.hr {
+  background-color: var(--bronze);
+}
+
+button, .button {
+  background: white;
+  color: black;
+}
+
+:is(button, .button):is(:hover, :focus, :active) {
+  background: var(--bronze);
+  box-shadow: var(--shadow);
+}
+
+.img {
+  border: 2px solid var(--bronze);
+}
+
+a.link {
+  color: black;
+}
+
+a.link:is(:hover, :focus, :active) {
+  background: var(--bronze);
+  box-shadow: var(--shadow);
+}

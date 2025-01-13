@@ -16,6 +16,7 @@ import About from "./components/main/About";
 import Contact from "./components/main/Contact";
 import Home from "./components/main/Home";
 import Services from "./components/main/Services";
+import Themes from "./components/main/Themes";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -27,6 +28,7 @@ root.render(
                     <Route path="services" element={<Services />} />
                     <Route path="about" element={<About />} />
                     <Route path="contact" element={<Contact />} />
+                    <Route path="themes" element={<Themes />} />
 
                     <Route path="*" element={<NotFound />} />
                 </Route>
