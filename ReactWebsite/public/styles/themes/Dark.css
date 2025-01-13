@@ -1,0 +1,75 @@
+:root {
+  --dark-blue: #000103;
+  --med-blue: #00132D;
+  --light-blue: #92C1FF;
+  --med-gold: #7A2B0D;
+  --dark-gold: #280B00;
+  --cream: #ffedd8;
+  
+  --gradient-wide: var(--dark-blue), var(--med-blue) 10%, var(--med-gold) 50%, var(--dark-gold);
+  --gradient-thin: var(--light-blue) 10%, transparent 20%;
+  
+  --admin-nav-bar: var(--dark-gold);
+}
+
+html {
+  background: var(--dark-gold);
+}
+
+body {
+  background: var(--dark-blue);
+  color: var(--cream);
+}
+
+.inset-box {
+  background-color: var(--med-blue);
+  color: var(--cream);
+}
+
+.pane {
+  background: var(--cream);
+  color: black;
+}
+
+.pane h2 {
+  color: var(--med-blue);
+}
+
+h2 {
+  color: var(--light-blue);
+}
+
+.inset-box button, .inset-box .button {
+  background: var(--med-gold);
+  color: var(--cream);
+}
+
+div.hr {
+  background-color: var(--med-gold);
+}
+
+button, .button {
+  background: var(--cream);
+  border-bottom: 2px solid var(--dark-blue) !important;
+  color: black;
+}
+
+:is(button, .button):is(:hover, :focus, :active) {
+  background: var(--med-gold);
+  border-bottom: 2px solid var(--dark-gold) !important;
+  box-shadow: var(--shadow);
+  color: var(--cream);
+}
+
+.img {
+  border: 2px solid var(--med-gold);
+}
+
+a.link {
+  color: black;
+}
+
+a.link:is(:hover, :focus, :active) {
+  background: var(--med-gold);
+  box-shadow: var(--shadow);
+}

@@ -15,6 +15,7 @@ export default function AdminNavBar() {
             <nav className="admin row">
                 <ul>
                     <li><Link to="/admin/home" className="button">Home</Link></li>
+                    <li><Link to="/admin/themes" className="button">Themes</Link></li>
                     <li><Link to="/admin/logout" className="button">Log Out</Link> </li>
                 </ul>
             </nav>

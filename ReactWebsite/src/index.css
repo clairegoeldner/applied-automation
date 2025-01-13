@@ -2,30 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates&display=swap');
 
 :root {
-  --blue: #021040;
-  --bronze: #5B3107;
-  --dark-grey: #252E33;
-  --med-grey: #717A7F;
-  --light-grey: #BDC6CB;
-
   --shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
-
-  --gradient-wide: var(--blue), var(--med-grey) 10%, var(--light-grey) 90%, var(--bronze);
-  --gradient-thin: var(--dark-grey), var(--med-grey) 25%, var(--light-grey) 75%, transparent;
 
   --font-body: Montserrat, sans-serif;
   --font-header: 'Times New Roman', Times, serif;
 }
 
 html {
-  background: var(--dark-grey);
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
 body {
-  background: white;
   font-family: var(--font-body);
   margin: 0;
   width: 100%;
@@ -46,10 +35,8 @@ div#root {
 }
 
 .inset-box {
-  background-color: var(--blue);
   border-radius: 5px;
   box-shadow: var(--shadow);
-  color: white;
   display: flex;
   font-family: var(--font-header);
   margin: 2rem auto;
@@ -62,9 +49,7 @@ div#root {
 }
 
 .pane {
-  background: white;
   border-radius: 2px;
-  color: black;
   font-size: 1.25rem;
   padding: 1rem;
   text-align: center;
@@ -83,12 +68,12 @@ div.section {
 
 :has(> .col) {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row wrap !important;
 }
 
 :has(> .row) {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column wrap !important;
 }
 
 .col, .row {
@@ -108,7 +93,6 @@ div.section {
 }
 
 div.hr {
-  background-color: var(--bronze);
   border-radius: 2px;
   display: block;
   height: 2px;
@@ -141,10 +125,8 @@ p {
 }
 
 button, .button {
-  background: white;
   border: none;
   border-radius: 2px;
-  color: black;
   display: block;
   font-size: 1.25rem;
   margin: 1rem auto;
@@ -155,14 +137,8 @@ button, .button {
   text-decoration: none;
 }
 
-:is(button, .button):is(:hover, :focus, :active) {
-  background: var(--bronze);
-  box-shadow: var(--shadow);
-}
-
 .img {
   background-color: grey;
-  border: 2px solid var(--bronze);
   border-radius: 2px;
   height: 250px;
   margin: auto;
@@ -181,11 +157,6 @@ a.link {
   padding: 0.5rem;
   text-decoration: none;
   transition: ease-in-out 0.25s;
-}
-
-a.link:is(:hover, :focus, :active) {
-  background: var(--bronze);
-  box-shadow: var(--shadow);
 }
 
 span.loader {

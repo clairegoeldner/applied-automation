@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import AdminNavBar from "./AdminNavBar";
 import Footer from "../../layout/Footer";
 import AdminLogin from "../AdminLogin";
+import { RefreshTheme } from "../../main/Themes";
 
 export default function AdminLayout() {
+    useEffect(RefreshTheme, []);
+
     if (isAuthenticated()) {
         return (
             <>
