@@ -41,6 +41,7 @@ button, .button {
 :is(button, .button):is(:hover, :focus, :active) {
   background: var(--bronze);
   box-shadow: var(--shadow);
+  color: white;
 }
 
 .img {
